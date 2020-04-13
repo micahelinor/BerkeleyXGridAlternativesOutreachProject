@@ -1,25 +1,39 @@
 {
-  "name": "vue-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-tree-chart",
+  "version": "1.2.6",
+  "description": "A vue2 component to display tree chart",
+  "author": "refined-x [tower1229@foxmail.com]",
+  "main": "./dist/TreeChart.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tower1229/Vue-Tree-Chart.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "tree",
+    "chart",
+    "tree chart"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tower1229/Vue-Tree-Chart/blob/master/README.md",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --dest dist --name TreeChart ./src/components/TreeChart.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11",
-    "vue-tree-chart": "^1.2.6"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-babel": "^3.9.2",
+    "@vue/cli-plugin-eslint": "^3.9.2",
+    "@vue/cli-service": "^3.9.2",
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
@@ -30,13 +44,19 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
+    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "rules": {}
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not ie <= 8"
   ]
 }
