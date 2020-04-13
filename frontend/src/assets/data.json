@@ -1,24 +1,8 @@
 {
   "name": "GRID",
-  "projects": [
-    {
-      "projName": "abc",
-      "grantee": "micah",
-      "date": "10/11/13",
-      "currAmount": "S100"
-    }
-  ],
   "children": [
     {
       "name": "CARB",
-      "projects": [
-        {
-          "projName": "fgh",
-          "grantee": "micah",
-          "date": "10/11/13",
-          "currAmount": "S100"
-        }
-      ],
       "children": [
         {
           "name": "grandchild",

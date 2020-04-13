@@ -8,7 +8,7 @@
             <div class="name">
               <b-button aria-controls="collapse-4" @click="visible = !visible">{{treeData.name}}</b-button>
                 <b-collapse id="collapse-4" v-model="visible" class="mt-2">
-                  <b-card>
+                  <b-card v-if="treeData.projects">
                     <p>Project Name: {{treeData.projects[0].projName}}</p>
                     <p>Grantee: {{treeData.projects[0].grantee}}</p>
                     <p>Date: {{treeData.projects[0].date}}</p>
@@ -22,8 +22,11 @@
       </tr>
       <tr v-if="treeData.children && treeData.extend">
         <td v-for="(children, index) in treeData.children" :key="index" colspan="2" class="childLevel">
+          
           <TreeChart :json="children" @click-node="$emit('click-node', $event)"/>
+          
         </td>
+        
       </tr>
     </table>
 </template>
