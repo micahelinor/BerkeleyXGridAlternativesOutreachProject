@@ -29,11 +29,6 @@ export default {
       landscape: [],
       data: gridData
     }
-  },
-  methods: {
-    clickNode: function(node){
-      console.log(node)
-    }
   }
 }
 </script>

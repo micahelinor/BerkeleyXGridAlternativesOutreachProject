@@ -5,7 +5,12 @@
           <div :class="{node: true, hasMate: treeData.mate}">
             <div class="person" @click="$emit('click-node', treeData)">
               <div class="avat">
-                <img :src="treeData.image_url" />
+                <b-button v-b-toggle.collapse-1 variant="primary">Toggle Collapse</b-button>
+                <b-collapse id="collapse-1" class="mt-2">
+                  <b-card>
+                    <p class="card-text">Collapse contents Here</p>
+                  </b-card>
+                </b-collapse>
               </div>
               <div class="name">{{treeData.name}}</div>
             </div>
@@ -84,8 +89,7 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 
 .node{position: relative; display: inline-block;width: 13em;box-sizing: border-box; text-align: center;}
 .node .person{position: relative; display: inline-block;z-index: 2;width:6em; overflow: hidden;}
-.node .person .avat{display: block;width:4em;height: 4em;margin:auto;overflow:hidden; background:#fff;border:1px solid #ccc;box-sizing: border-box;}
-.node .person .avat img{width:100%;height: 100%;}
+
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
 .node.hasMate::after{content: "";position: absolute;left:2em;right:2em;top:2em;border-top:2px solid #ccc;z-index: 1;}
 .node.hasMate .person:last-child{margin-left:1em;}
