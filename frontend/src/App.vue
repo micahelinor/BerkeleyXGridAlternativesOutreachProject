@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     clickNode: function(node){
-      // eslint-disable-next-line
       console.log(node)
     }
   }
