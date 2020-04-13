@@ -3,24 +3,20 @@
       <tr>
         <td :colspan="treeData.children ? treeData.children.length * 2 : 1" :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}">
           <div :class="{node: true, hasMate: treeData.mate}">
-            <div class="person" @click="$emit('click-node', treeData)">
-              <div class="avat">
-                <b-button v-b-toggle.collapse-1 variant="primary">Toggle Collapse</b-button>
-                <b-collapse id="collapse-1" class="mt-2">
+            <div class="person" @click="$emit('click-node', treeData)"></div>
+            <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)"></div>
+            <div class="name">
+              <b-button aria-controls="collapse-4" @click="visible = !visible">{{treeData.name}}</b-button>
+                <b-collapse id="collapse-4" v-model="visible" class="mt-2">
                   <b-card>
-                    <p class="card-text">Collapse contents Here</p>
+                    <p>Project Name: {{treeData.projects[0].projName}}</p>
+                    <p>Grantee: {{treeData.projects[0].grantee}}</p>
+                    <p>Date: {{treeData.projects[0].date}}</p>
+                    <p>Current Amount: {{treeData.projects[0].currAmount}}</p>
                   </b-card>
                 </b-collapse>
               </div>
-              <div class="name">{{treeData.name}}</div>
             </div>
-            <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)">
-              <div class="avat">
-                <img :src="treeData.mate.image_url" />
-              </div>
-              <div class="name">{{treeData.mate.name}}</div>
-            </div>
-          </div>
           <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
         </td>
       </tr>
@@ -38,7 +34,8 @@ export default {
   props: ["json"],
   data() {
     return {
-      treeData: {}
+      treeData: {},
+      visible: false
     }
   },
   watch: {

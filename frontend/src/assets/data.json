@@ -1,19 +1,59 @@
 {
   "name": "GRID",
+  "projects": [
+    {
+      "projName": "abc",
+      "grantee": "micah",
+      "date": "10/11/13",
+      "currAmount": "S100"
+    }
+  ],
   "children": [
     {
       "name": "CARB",
-            "children": [
-              {
-                "name": "grandchild"
-              },
-              {
-                "name": "grandchild2"
-              },
-              {
-                "name": "grandchild3"
-              }
-            ]
-          }
-        ]
-      }
+      "projects": [
+        {
+          "projName": "fgh",
+          "grantee": "micah",
+          "date": "10/11/13",
+          "currAmount": "S100"
+        }
+      ],
+      "children": [
+        {
+          "name": "grandchild",
+          "projects": [
+            {
+              "projName": "edf",
+              "grantee": "micah",
+              "date": "10/11/13",
+              "currAmount": "S100"
+            }
+          ]
+        },
+        {
+          "name": "grandchild2",
+          "projects": [
+            {
+              "projName": "fgh",
+              "grantee": "micah",
+              "date": "10/11/13",
+              "currAmount": "S100"
+            }
+          ]
+        },
+        {
+          "name": "grandchild3",
+          "projects": [
+            {
+              "projName": "fgh",
+              "grantee": "micah",
+              "date": "10/11/13",
+              "currAmount": "S100"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
