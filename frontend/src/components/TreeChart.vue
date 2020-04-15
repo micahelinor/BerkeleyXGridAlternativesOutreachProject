@@ -10,10 +10,11 @@
                 <b-collapse id="collapse-4" v-model="visible" class="mt-2">
                   <b-card v-if="treeData.projects">
                     <p>Project Name: {{treeData.projects[0].projName}}</p>
-                    <p>Grantee: {{treeData.projects[0].grantee}}</p>
+                    <p>Grant Amount: {{treeData.projects[0].grantAmount}}</p>
                     <p>Date: {{treeData.projects[0].date}}</p>
-                    <p>Current Amount: {{treeData.projects[0].currAmount}}</p>
-                  </b-card>
+                    <p>Geographic Location: {{treeData.projects[0].location}}<p>
+                    <p>Contact: {{treeData.projects[0].contact}}</p>
+                 </b-card>
                 </b-collapse>
               </div>
             </div>

@@ -1,39 +1,90 @@
 {
-  "name": "GRID",
+  "name": "CARB",
   "children": [
     {
-      "name": "CARB",
+      "name": "GRID",
       "children": [
         {
-          "name": "grandchild",
+          "name": "Bay Area Air Quality Management District",
           "projects": [
             {
-              "projName": "edf",
-              "grantee": "micah",
-              "date": "10/11/13",
-              "currAmount": "S100"
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$10,000,000",
+              "date": "May 2015 – Ongoing",
+              "location": "Bay Area counties",
+              "contact": "email"
             }
           ]
         },
         {
-          "name": "grandchild2",
+          "name": "South Coast Air Quality Management District",
           "projects": [
             {
-              "projName": "fgh",
-              "grantee": "micah",
-              "date": "10/11/13",
-              "currAmount": "S100"
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$51,800,000",
+              "date": "May 2015 – Ongoing",
+              "location": "LA, San Bernadino, Orange, and Riverside County",
+              "contact": "email"
             }
           ]
         },
         {
-          "name": "grandchild3",
+          "name": "San Joaquin Valley Air Pollution Control District",
           "projects": [
             {
-              "projName": "fgh",
-              "grantee": "micah",
-              "date": "10/11/13",
-              "currAmount": "S100"
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$27,500,000",
+              "date": "May 2015 – Ongoing",
+              "location": "San Joaquin Valley",
+              "contact": "email"
+            }
+          ]
+        },
+        {
+          "name": "Community Housing Development Corporation",
+          "projects": [
+            {
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$6,226,914",
+              "date": "November 4, 2015 – March 2026 ",
+              "location": "Bay Area counties",
+              "contact": "email"
+            }
+          ]
+        },
+        {
+          "name": "Center for Sustainable Energy",
+          "projects": [
+            {
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$0000",
+              "date": "00/00/00",
+              "location": "Statewide",
+              "contact": "email"
+            }
+          ]
+        },
+        {
+          "name": "Beneficial State Foundation",
+          "projects": [
+            {
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$0000",
+              "date": "00/00/00",
+              "location": "Statewide",
+              "contact": "email"
+            }
+          ]
+        },
+        {
+          "name": "GRID Alternatives North Valley",
+          "projects": [
+            {
+              "projName": "Clean Cars for All - Bay Area",
+              "grantAmount": "$5,000,000",
+              "date": "Fall 2019-Fal 2021",
+              "location": "Sacramento County",
+              "contact": "email"
             }
           ]
         }
