@@ -4,32 +4,39 @@
         <td :colspan="treeData.children ? treeData.children.length * 2 : 1" :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}">
           <div :class="{node: true, hasMate: treeData.mate}">
             <div class="person" @click="$emit('click-node', treeData)"></div>
-            <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)"></div>
             <div class="name">
+              <div class="button">
               <b-button aria-controls="collapse-4" @click="visible = !visible">{{treeData.name}}</b-button>
+              </div>
                 <b-collapse id="collapse-4" v-model="visible" class="mt-2">
                   <b-card v-if="treeData.projects">
+                    <div class="collapse">
                     <p>Project Name: {{treeData.projects[0].projName}}</p>
                     <p>Grant Amount: {{treeData.projects[0].grantAmount}}</p>
                     <p>Date: {{treeData.projects[0].date}}</p>
                     <p>Geographic Location: {{treeData.projects[0].location}}<p>
                     <p>Contact: {{treeData.projects[0].contact}}</p>
+                    </div>
+                 </b-card>
+                 <b-card v-if="treeData.info">
+                   <div class="collapse">
+                    <p>Contact: {{treeData.info[0].contact}}</p>
+                    <p>Location: {{treeData.info[0].location}}</p>
+                    <p>Role in Project: {{treeData.info[0].role}}</p>
+                    </div>
                  </b-card>
                 </b-collapse>
-              </div>
             </div>
-          <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
-        </td>
-      </tr>
-      <tr v-if="treeData.children && treeData.extend">
-        <td v-for="(children, index) in treeData.children" :key="index" colspan="2" class="childLevel">
-          
-          <TreeChart :json="children" @click-node="$emit('click-node', $event)"/>
-          
-        </td>
-        
-      </tr>
-    </table>
+          </div>
+        <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
+      </td>
+    </tr>
+    <tr v-if="treeData.children && treeData.extend">
+      <td v-for="(children, index) in treeData.children" :key="index" colspan="2" class="childLevel">
+        <TreeChart :json="children" @click-node="$emit('click-node', $event)"/>
+      </td>
+     </tr>
+  </table>
 </template>
 
 <script>
@@ -80,7 +87,7 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .extend_handle:hover:before{border-color:#333 #333 transparent transparent;}
 .extend .extend_handle:before{transform: rotateZ(-45deg);}
 
-.extend::after{content: "";position: absolute;left:50%;bottom:15px;height:15px;border-left:2px solid #ccc;transform: translate3d(-1px,0,0)}
+.extend::after{content: "";position: absolute;left:50%;bottom:15px;height:10px;border-left:2px solid #ccc;transform: translate3d(-1px,0,0)}
 .childLevel::before{content: "";position: absolute;left:50%;bottom:100%;height:15px;border-left:2px solid #ccc;transform: translate3d(-1px,0,0)}
 .childLevel::after{content: "";position: absolute;left:0;right:0;top:-15px;border-top:2px solid #ccc;}
 .childLevel:first-child:before, .childLevel:last-child:before{display: none;}
@@ -92,6 +99,25 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .node .person{position: relative; display: inline-block;z-index: 2;width:6em; overflow: hidden;}
 
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
+.button {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 10px;
+    border:2px solid #1b577d;
+    background-color: #1689d1a6;
+    border-radius: 40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+  }
+.collapse {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 10px;
+  border:0.5px solid #000000;
+  background-color: #09d81300;
+  border-radius: 20px;
+  text-align: center;
+
+}
 .node.hasMate::after{content: "";position: absolute;left:2em;right:2em;top:2em;border-top:2px solid #ccc;z-index: 1;}
 .node.hasMate .person:last-child{margin-left:1em;}
 

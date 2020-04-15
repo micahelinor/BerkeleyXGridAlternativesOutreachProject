@@ -14,6 +14,28 @@
               "location": "Bay Area counties",
               "contact": "email"
             }
+          ],
+          "children": [
+            {
+              "name": "Micah",
+              "info": [
+                {
+                  "contact" : "123445",
+                  "location" : "berkeley",
+                  "role" : "engineer"
+                }
+              ]
+            },
+            {
+              "name": "Agatha",
+              "info": [
+                {
+                  "contact" : "123445",
+                  "location" : "Los angeles",
+                  "role" : "lawyer"
+                }
+              ]
+            }
           ]
         },
         {
