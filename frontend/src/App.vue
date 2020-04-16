@@ -7,7 +7,7 @@
     <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     <footer class="foot">
         <p>© 2020 Authors
-            <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">Kiana Kazemi & Micah Feras</a> 
+            <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">Kiana Kazemi, Micah Feras, and Emma Stephan</a> 
             Github 
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">GRIDxBerkeley</a>
         </p>

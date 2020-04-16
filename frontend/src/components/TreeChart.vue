@@ -101,9 +101,9 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
 .button {
     font-family: Impact, Charcoal, sans-serif;
-    font-size: 10px;
-    border:2px solid #1b577d;
-    background-color: #1689d1a6;
+    font-size: 14px;
+    border:2px solid #037d50;
+    background-color: #a0d294;
     border-radius: 40px;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -111,8 +111,8 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
   }
 .collapse {
   font-family: Impact, Charcoal, sans-serif;
-  font-size: 10px;
-  border:0.5px solid #000000;
+  font-size: 13px;
+  border:0.5px solid #037d50;
   background-color: #09d81300;
   border-radius: 20px;
   text-align: center;
