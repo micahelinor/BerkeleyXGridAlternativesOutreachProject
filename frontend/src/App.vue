@@ -1,14 +1,10 @@
 <template>
   <v-stage ref="stage" :config="stageSize">
     <div id="app">
-      <h1 text-align="center">
+      <h1 class="header">
         California Air Resources Board Clean Vehicles Program Partners
       </h1>
-    <label>
-       Orientation
-      <input type="checkbox" v-model="landscape" value="1">
-    </label>
-    <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
+    <TreeChart class="treeChart" :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     <footer class="foot">
         <p>© 2020 Authors
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">Kiana Kazemi & Micah Feras</a> 
@@ -65,6 +61,20 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.header{
+  position: absolute;
+  top: 0;
+  background: #037d50;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.treeChart {
+  position: absolute;
+  top: 180px;
+
 }
 #app .avat{border-radius: 2em;border-width:2px;}
 #app .name{font-weight:700;}

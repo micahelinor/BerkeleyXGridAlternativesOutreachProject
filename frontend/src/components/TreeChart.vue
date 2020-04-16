@@ -1,5 +1,5 @@
 <template>
-    <table align="center" v-if="treeData.name">
+    <table v-if="treeData.name">
       <tr>
         <td :colspan="treeData.children ? treeData.children.length * 2 : 1" :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}">
           <div :class="{node: true, hasMate: treeData.mate}">
