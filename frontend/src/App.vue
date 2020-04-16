@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <label>
-      切换为横向
+      California Air Resources Board Clean Vehicles Program Partners 
       <input type="checkbox" v-model="landscape" value="1">
     </label>
     <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     <footer class="foot">
-        <p>© 2020 - 3020 Authors
+        <p>© 2020 Authors
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">Kiana Kazemi & Micah Feras</a> 
             Github 
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">GRIDxBerkeley</a>
