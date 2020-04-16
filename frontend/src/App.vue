@@ -1,7 +1,11 @@
 <template>
-  <div id="app">
+  <v-stage ref="stage" :config="stageSize">
+    <div id="app">
+      <h1 text-align="center">
+        California Air Resources Board Clean Vehicles Program Partners
+      </h1>
     <label>
-      California Air Resources Board Clean Vehicles Program Partners 
+       Orientation
       <input type="checkbox" v-model="landscape" value="1">
     </label>
     <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
@@ -11,13 +15,16 @@
             Github 
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">GRIDxBerkeley</a>
         </p>
-    </footer>
-  </div>
+      </footer>
+    </div>
+  </v-stage>
+  
 </template>
 
 <script>
 import TreeChart from "@/components/TreeChart";
 import gridData from "./assets/data.json"
+
 
 export default {
   name: 'app',
@@ -27,7 +34,24 @@ export default {
   data() {
     return {
       landscape: [],
-      data: gridData
+      data: gridData,
+      stage : {
+        width: 0,
+        height: 0
+      }
+    }
+  },
+  created() {
+      window.addEventListener('resize', this.handleResize);
+      this.handleResize();
+  },
+  destroyed() {
+     window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.stage.width = window.innerWidth;
+      this.stage.height = window.innerHeight;
     }
   }
 }
