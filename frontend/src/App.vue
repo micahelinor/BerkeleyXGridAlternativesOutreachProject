@@ -49,11 +49,11 @@ export default {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #333;
-    padding: 24px;
+    background: #037d50;
+    padding: 20px;
     overflow: hidden;
-    color: #999;
-    font-size: 14px;
+    color: #0d0d0d;
+    font-size: 11px;
     text-align: center;
 }
 .foot a{color:#fff;margin:0 .5em}
