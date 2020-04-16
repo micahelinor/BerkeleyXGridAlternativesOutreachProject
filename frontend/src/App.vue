@@ -1,23 +1,26 @@
 <template>
-  <div id="app">
-    <label>
-      California Air Resources Board Clean Vehicles Program Partners 
-      <input type="checkbox" v-model="landscape" value="1">
-    </label>
-    <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
+  <v-stage ref="stage" :config="stageSize">
+    <div id="app">
+      <h1 class="header">
+        California Air Resources Board Clean Vehicles Program Partners
+      </h1>
+    <TreeChart class="treeChart" :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     <footer class="foot">
         <p>© 2020 Authors
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">Kiana Kazemi, Micah Feras, and Emma Stephan</a> 
             Github 
             <a href="https://github.com/micahelinor/BerkeleyXGridAlternativesOutreachProject" target="_blank">GRIDxBerkeley</a>
         </p>
-    </footer>
-  </div>
+      </footer>
+    </div>
+  </v-stage>
+  
 </template>
 
 <script>
 import TreeChart from "@/components/TreeChart";
 import gridData from "./assets/data.json"
+
 
 export default {
   name: 'app',
@@ -27,7 +30,24 @@ export default {
   data() {
     return {
       landscape: [],
-      data: gridData
+      data: gridData,
+      stage : {
+        width: 0,
+        height: 0
+      }
+    }
+  },
+  created() {
+      window.addEventListener('resize', this.handleResize);
+      this.handleResize();
+  },
+  destroyed() {
+     window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.stage.width = window.innerWidth;
+      this.stage.height = window.innerHeight;
     }
   }
 }
@@ -41,6 +61,20 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.header{
+  position: absolute;
+  top: 0;
+  background: #037d50;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.treeChart {
+  position: absolute;
+  top: 180px;
+
 }
 #app .avat{border-radius: 2em;border-width:2px;}
 #app .name{font-weight:700;}

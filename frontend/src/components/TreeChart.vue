@@ -6,7 +6,11 @@
             <div class="person" @click="$emit('click-node', treeData)"></div>
             <div class="name">
               <div class="button">
-              <b-button aria-controls="collapse-4" @click="visible = !visible">{{treeData.name}}</b-button>
+              <b-button aria-controls="collapse-4" @click="visible = !visible">
+                <p>
+                {{treeData.name}}
+                </p>
+              </b-button>
               </div>
                 <b-collapse id="collapse-4" v-model="visible" class="mt-2">
                   <b-card v-if="treeData.projects">
@@ -95,24 +99,32 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .childLevel:last-child:after{right:50%;height:15px; border:2px solid;border-color:#ccc #ccc transparent transparent;border-radius: 0 6px 0 0;transform: translate3d(-1px,0,0)}
 .childLevel:first-child.childLevel:last-child::after{left:auto;border-radius: 0;border-color:transparent #ccc transparent transparent;transform: translate3d(1px,0,0)}
 
-.node{position: relative; display: inline-block;width: 13em;box-sizing: border-box; text-align: center;}
+.node{position: relative; display: inline-block;width: 9.5em;box-sizing: border-box; text-align: center;}
 .node .person{position: relative; display: inline-block;z-index: 2;width:6em; overflow: hidden;}
 
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
 .button {
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 14px;
-    border:2px solid #037d50;
-    background-color: #a0d294;
+    width: 140px;
+    height: 80px;
+    border:2px solid #1b577d;
+    background-color: #1689d1a6;
     border-radius: 40px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    
+  }
+  .button p{
+    position: relative;
+    top: 0.3px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 16px;
     text-align: center;
+    vertical-align:middle;
   }
 .collapse {
   font-family: Impact, Charcoal, sans-serif;
-  font-size: 13px;
-  border:0.5px solid #037d50;
+  font-size: 16px;
+  border:0.5px solid #000000;
   background-color: #09d81300;
   border-radius: 20px;
   text-align: center;
