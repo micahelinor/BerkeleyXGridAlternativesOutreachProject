@@ -17,22 +17,32 @@
           ],
           "children": [
             {
-              "name": "Micah",
+              "name": "Energy for All",
               "info": [
                 {
-                  "contact" : "123445",
-                  "location" : "berkeley",
-                  "role" : "engineer"
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "----"
                 }
               ]
             },
             {
-              "name": "Agatha",
+              "name": "Benefecial State Foundation",
               "info": [
                 {
-                  "contact" : "123445",
-                  "location" : "Los angeles",
-                  "role" : "lawyer"
+                  "contact" : "00000",
+                  "location" : "----",
+                  "role" : "------"
+                }
+              ]
+            },
+            {
+              "name": "Community Housing Development Corporation",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "-----"
                 }
               ]
             }
@@ -48,6 +58,48 @@
               "location": "LA, San Bernadino, Orange, and Riverside County",
               "contact": "email"
             }
+          ],
+          "children": [
+            {
+              "name": "PacoimaBeautiful",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "----"
+                }
+              ]
+            },
+            {
+              "name": "LibertyHillFoundation",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "----",
+                  "role" : "------"
+                }
+              ]
+            },
+            {
+              "name": "Opus Inspection",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "-----"
+                }
+              ]
+            },
+            {
+              "name": "SA Recycling",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "-----"
+                }
+              ]
+            }
           ]
         },
         {
@@ -60,6 +112,18 @@
               "location": "San Joaquin Valley",
               "contact": "email"
             }
+          ],
+          "children": [
+            {
+              "name": "Valley Can",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "----"
+                }
+              ]
+            }
           ]
         },
         {
@@ -71,6 +135,28 @@
               "date": "November 4, 2015 – March 2026 ",
               "location": "Bay Area counties",
               "contact": "email"
+            }
+          ],
+          "children": [
+            {
+              "name": "Travis Credit Union",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "----"
+                }
+              ]
+            },
+            {
+              "name": "Beneficial State Foundation",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "----"
+                }
+              ]
             }
           ]
         },
@@ -95,6 +181,18 @@
               "date": "00/00/00",
               "location": "Statewide",
               "contact": "email"
+            }
+          ],
+          "children": [
+            {
+              "name": "Center for Sustainable Energy",
+              "info": [
+                {
+                  "contact" : "00000",
+                  "location" : "-----",
+                  "role" : "----"
+                }
+              ]
             }
           ]
         },
