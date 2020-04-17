@@ -59,14 +59,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #61892F;
   margin-top: 60px;
 }
 .header{
   position: absolute;
   top: 0;
-  background: #037d50;
-  padding: 50px;
+  background: #00;
+  padding: 30px;
   width: 100%;
   text-align: center;
   overflow: hidden;
@@ -83,11 +83,11 @@ export default {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #037d50;
-    padding: 20px;
+    background: #222629;
+    padding: 18px;
     overflow: hidden;
-    color: #0d0d0d;
-    font-size: 11px;
+    color: #61892F;
+    font-size: 12px;
     text-align: center;
 }
 .foot a{color:#fff;margin:0 .5em}
