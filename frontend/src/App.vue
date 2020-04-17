@@ -59,7 +59,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #61892F;
+  color: #222629;
   margin-top: 60px;
 }
 .header{
@@ -70,6 +70,7 @@ export default {
   width: 100%;
   text-align: center;
   overflow: hidden;
+  font-size: 50px;
 }
 .treeChart {
   position: absolute;

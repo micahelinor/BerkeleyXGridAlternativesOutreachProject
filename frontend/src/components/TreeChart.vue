@@ -105,29 +105,29 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
 .button {
     width: 140px;
-    height: 80px;
-    border:2px solid #1b577d;
-    background-color: #1689d1a6;
-    border-radius: 40px;
-    padding-top: 10px;
+    height: px;
+    border:0px solid #1b577d;
+    background-color: #86C232;
+    border-radius: 5px;
+    padding-top: 1px;
     padding-bottom: 25px;
     
   }
   .button p{
     position: relative;
-    top: 0.3px;
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 16px;
+    top: 0.015px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 18px;
     text-align: center;
     vertical-align:middle;
   }
 .collapse {
-  font-family: Impact, Charcoal, sans-serif;
-  font-size: 16px;
-  border:0.5px solid #000000;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  border:px solid #D3D3D3;
   background-color: #09d81300;
-  border-radius: 20px;
-  text-align: center;
+  border-radius: 5px;
+  text-align: left;
 
 }
 .node.hasMate::after{content: "";position: absolute;left:2em;right:2em;top:2em;border-top:2px solid #ccc;z-index: 1;}
